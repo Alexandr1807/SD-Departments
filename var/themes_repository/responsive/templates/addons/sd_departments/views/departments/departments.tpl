@@ -46,7 +46,7 @@
 
                                 <div class="ty-grid-list__item-name">
                                     <p class="product-title">
-                                        Руководитель
+                                        {__("sd_departments.leader")}
                                     </p>
                                     {$department.lider_firstname} {$department.lider_lastname}
                                 </div>

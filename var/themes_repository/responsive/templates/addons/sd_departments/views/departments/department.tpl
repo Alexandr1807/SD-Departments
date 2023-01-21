@@ -10,7 +10,7 @@
     </div>
 </div>
 <div>
-    <h2>Сотрудники отдела</h2>
+    <h2>{__("sd_departments.members")}</h2>
     {foreach from=$department_data.users_ids item=v}
         <div>
             <p>

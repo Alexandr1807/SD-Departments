@@ -58,11 +58,11 @@
             {include file="common/select_status.tpl" input_name="department_data[status]" id="elm_banner_status" obj_id=$id obj=$department_data hidden=false}
 
             <div class="control-group">
-                <label class="control-label">Руководитель</label>
+                <label class="control-label">{__("sd_departments.leader")}</label>
                 <div class="controls">
                     {include
                     file="pickers/users/picker.tpl"
-                    but_text="Добавить руководителя отдела"
+                    but_text=__("sd_departments.choose-lider-department")
                     data_id="return_users"
                     but_meta="btn"
                     input_name="department_data[lider_id]"
@@ -75,10 +75,10 @@
             </div>
 
             <div class="control-group">
-                <label class="control-label">Сотрудники</label>
+                <label class="control-label">{__("sd_departments.members")}</label>
                 <div class="controls">
                     {include file="pickers/users/picker.tpl"
-                    but_text="Добавить сотрудников в отдел"
+                    but_text=__("sd_departments.choose-members")
                     data_id="return_users"
                     but_meta="btn"
                     input_name="department_data[users_ids]"
@@ -105,14 +105,13 @@
 {/capture}
 
 {if !$id}
-    {$title = "Create new department"}
+    {$title = __("sd_departments.new-department")}
 {else}
-    {$title_start = "Изменить"}
+    {$title_start = __("sd_departments.update")}
     {$title_end = $department_data.department}
 {/if}
 
 {include file="common/mainbox.tpl"
-title=($id) ? $department_data.department : "Добавить новый отдел"
+title=($id) ? $department_data.department : __("sd_departments.new-department")
 content=$smarty.capture.mainbox
-buttons=$smarty.capture.buttons
-select_languages=true}
+buttons=$smarty.capture.buttons}

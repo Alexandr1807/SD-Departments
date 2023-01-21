@@ -115,7 +115,7 @@
 
         {/capture}
         {capture name="adv_buttons"}
-            {include file="common/tools.tpl" tool_href="departments.add_department" prefix="top" hide_tools="true" title="Добавить отдел" icon="icon-plus"}
+            {include file="common/tools.tpl" tool_href="departments.add_department" prefix="top" hide_tools="true" title=__("sd_departments.new-department") icon="icon-plus"}
         {/capture}
     </form>
 
@@ -123,8 +123,7 @@
 
 
 {hook name="departments:manage_mainbox_params"}
-{$page_title = __(departments)}
-{$select_languages = true}
+{$page_title = __("sd_departments.departments")}
 {/hook}
 
 {include

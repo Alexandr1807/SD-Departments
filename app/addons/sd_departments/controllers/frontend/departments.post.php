@@ -7,7 +7,7 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 if ($mode == 'departments') {
     // Save current url to session for 'Continue shopping' button
-    Tygh::$app['session']['continue_url'] = "departments.departments";
+    Tygh::$app['session']['continue_url'] = 'departments.departments';
     $params = $_REQUEST;
 
     $params['user_id'] = Tygh::$app['session']['auth']['user_id'];
@@ -19,7 +19,7 @@ if ($mode == 'departments') {
     Tygh::$app['view']->assign('columns', 3);
 
 
-    fn_add_breadcrumb(__('departments'));
+    fn_add_breadcrumb(__('sd_departments.departments'));
 }  elseif ($mode === 'department') {
     $department_data = [];
     $department_id = !empty($_REQUEST['department_id']) ? $_REQUEST['department_id'] : 0;
@@ -33,7 +33,7 @@ if ($mode == 'departments') {
 
     Tygh::$app['view']->assign('department_data', $department_data);
 
-    fn_add_breadcrumb([__('departments'), $department_data['department']]);
+    fn_add_breadcrumb([__('sd_departments.departments'), $department_data['department']]);
 
 
     $params = $_REQUEST;

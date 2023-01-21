@@ -1,5 +1,6 @@
 msgid ""
-msgstr "Project-Id-Version: tygh\n"
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: English\n"
 "Language: en_US"
@@ -12,6 +13,35 @@ msgctxt "Addons::description::sd_departments"
 msgid "Allows you to add departments"
 msgstr "Allows you to add departments"
 
-msgctxt "SettingsSections::sd_departments.departments"
+msgctxt "Languages::sd_departments.leader"
+msgid "Leader"
+msgstr "Leader"
+
+msgctxt "Languages::sd_departments.department"
+msgid "Department"
+msgstr "Department"
+
+msgctxt "Languages::sd_departments.departments"
 msgid "Departments"
 msgstr "Departments"
+
+msgctxt "Languages::sd_departments.update"
+msgid "Update"
+msgstr "Update"
+
+msgctxt "Languages::sd_departments.choose-lider-department"
+msgid "Choose leader of the department"
+msgstr "Choose leader of the department"
+
+msgctxt "Languages::sd_departments.choose-members"
+msgid "Choose members of the department"
+msgstr "Choose members of the department"
+
+msgctxt "Languages::sd_departments.new-department"
+msgid "Create new department"
+msgstr "Create new department"
+
+msgctxt "Languages::sd_departments.members"
+msgid "Members"
+msgstr "Members"
+
