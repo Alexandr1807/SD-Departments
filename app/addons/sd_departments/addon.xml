@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>sd_departments</id>
+    <version>4.15.2.0</version>
+    <priority>1200</priority>
+    <position>10</position>
+    <status>active</status>
+    <has_icon>Y</has_icon>
+    <queries>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:departments` (
+            `department_id` INT(11) unsigned NOT NULL auto_increment,
+            `position` INT(11) unsigned NOT NULL default '0',
+            `status` varchar(1) NOT NULL default 'A',
+            `timestamp` INT(11) unsigned NOT NULL default '0',
+            `upd_timestamp` INT(11) unsigned NOT NULL default '0',
+            `lider_id` INT(11) unsigned NOT NULL default '0',
+            KEY (`lider_id`),
+            PRIMARY KEY (`department_id`)
+            ) ENGINE=INNODB DEFAULT CHARSET=utf8
+        </item>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:department_descriptions` (
+            `department_id` INT(11) unsigned NOT NULL default '0',
+            `lang_code` char(2) NOT NULL default '',
+            `department` varchar(255) NOT NULL default '',
+            `description` text null,
+            PRIMARY KEY (`department_id`, `lang_code`)
+            ) ENGINE=INNODB DEFAULT CHARSET=utf8
+        </item>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:department_links` (
+            `department_id` INT(11) unsigned NOT NULL default '0',
+            `user_id` INT(11) unsigned NOT NULL default '0',
+            KEY (`user_id`),
+            KEY (`department_id`),
+            PRIMARY KEY (`department_id`, `user_id`)
+            ) ENGINE=INNODB DEFAULT CHARSET=utf8
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS `?:departments`</item>
+        <item for="uninstall">DROP TABLE IF EXISTS `?:department_links`</item>
+        <item for="uninstall">DROP TABLE IF EXISTS `?:department_descriptions`</item>
+    </queries>
+</addon>
